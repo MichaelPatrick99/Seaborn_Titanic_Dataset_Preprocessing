@@ -25,7 +25,7 @@ plt.xlabel('Age')
 plt.ylabel('Count')
 
 # Show the plot
-plt.show()
+# plt.show()
 
 # Using a box plot to compare the fares paid by passengers
 plt.figure(figsize=(8, 6))
@@ -37,7 +37,27 @@ plt.xlabel('Survival Status')
 plt.ylabel('Fare')
 
 # Show plot
+# plt.show()
+
+
+
+# Computing for correlation matrix
+correlation_matrix = titanic_dataframe_clean.corr()
+
+# heatmap
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+
+# Customize plot
+plt.title('Correlation Heatmap')
+plt.xticks(rotation=45)
+plt.yticks(rotation=0)
+
+# Show plot
 plt.show()
+
+
+
 
 # display option to show all columns
 pd.set_option('display.max_columns', None)
