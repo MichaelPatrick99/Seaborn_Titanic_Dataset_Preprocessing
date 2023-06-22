@@ -44,17 +44,17 @@ plt.ylabel('Fare')
 # Computing for correlation matrix
 correlation_matrix = titanic_dataframe_clean.corr()
 
-# heatmap
-plt.figure(figsize=(10, 8))
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
-
-# Customize plot
-plt.title('Correlation Heatmap')
-plt.xticks(rotation=45)
-plt.yticks(rotation=0)
-
-# Show plot
-plt.show()
+# # heatmap
+# plt.figure(figsize=(10, 8))
+# sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+#
+# # Customize plot
+# plt.title('Correlation Heatmap')
+# plt.xticks(rotation=45)
+# plt.yticks(rotation=0)
+#
+# # Show plot
+# plt.show()
 
 
 
