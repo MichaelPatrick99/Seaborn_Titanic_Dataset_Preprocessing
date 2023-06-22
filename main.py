@@ -13,7 +13,10 @@ missing_data_percentage = (missing_data_count / len(titanic_dataframe) ) * 100
 titanic_dataframe_clean = titanic_dataframe.dropna()
 
 age_data = titanic_dataframe_clean['age']
-# Ploting the histogram
+
+# Ploting the histogram to show age distribution of passengers
+
+plt.figure(figsize=(8, 6))
 plt.hist(age_data, bins=10, color='blue')
 
 # Customizing the plot
@@ -24,16 +27,28 @@ plt.ylabel('Count')
 # Show the plot
 plt.show()
 
-# Set the display option to show all columns
+# Using a box plot to compare the fares paid by passengers
+plt.figure(figsize=(8, 6))
+sns.boxplot(x='survived', y='fare', data=titanic_dataframe_clean)
+
+# Plot customization
+plt.title('Comparison of Fares: Survived vs. Not Survived')
+plt.xlabel('Survival Status')
+plt.ylabel('Fare')
+
+# Show plot
+plt.show()
+
+# display option to show all columns
 pd.set_option('display.max_columns', None)
 
-# Set the display option to show all rows
+# display option to show all rows
 pd.set_option('display.max_rows', None)
 
-# View the first few rows of the dataset
+# Viewing the first few rows of the dataset
 print(titanic_data.head())
 
-# Get information about the dataset
+# Getting information about the dataset
 print(titanic_data.info())
 
 # Statistical summary of the dataset
